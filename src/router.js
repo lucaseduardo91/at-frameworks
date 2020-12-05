@@ -8,7 +8,7 @@ import EditarCompra from './components/EditarCompra'
 Vue.use(VueRouter);
 
 function guardFavorite(to, from, next) {
-    if (to.name == 'EditarCompra' && from.name != 'NovaCompra') {
+    if (to.name == 'editarCompra' && from.name != 'detalharCompra') {
         next('/');
     }
     else {
