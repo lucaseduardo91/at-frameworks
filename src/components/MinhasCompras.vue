@@ -40,7 +40,7 @@ export default {
     computed: mapGetters(["allPurchases"]),
     methods: {
         ...mapActions(["getPurchases"]),        
-        irParaCadastro(){          
+        irParaCadastro(){ 
           this.$router.push({name: 'novaCompra'}); 
         } 
     },

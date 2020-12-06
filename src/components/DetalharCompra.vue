@@ -66,7 +66,7 @@ export default {
     },
     finalizarCompra(){        
         this.purchase.status = 2
-        this.addPurchase(JSON.stringify(this.usuario));
+        this.addPurchase(this.purchase);
         this.$router.push({name: 'listaCompras'})
     },
     editarCompra(){

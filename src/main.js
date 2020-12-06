@@ -3,9 +3,11 @@ import App from './App.vue'
 import router from './router';
 import store from "./store";
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
+import UUID from 'vue-uuid'
 
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
+Vue.use(UUID);
 
 Vue.config.productionTip = false
 

@@ -18,17 +18,42 @@ const state = {
   
   },
   
-  addPurchase({ commit }, purchase){
-    //axios.post...then()
-    commit('addPurchase', purchase);
+  addPurchase({ commit }, purchase){ 
+    const headers = { 
+      "Content-Type": "application/json"
+    };
+
+    axios.post(
+      "http://localhost:3000/purchases", purchase, {headers}
+    ).then((response) => {      
+      commit('addPurchase', response.data);
+    });
+    
   },
+  
   deletePurchase({ commit }, id){
-    //axios.delete...then()
-    commit('deletePurchase', id);
+    const headers = { 
+      "Content-Type": "application/json"
+    };
+
+    axios.delete(
+      "http://localhost:3000/purchases/"+id, {headers}
+    ).then((response) => {      
+      commit('deletePurchase', response.data.id);
+    });
+    
   },
-  updatePurchase({ commit }, updPurchase) {
-    //axios.put...then()    
-    commit("updatePurchase", updPurchase);
+
+  updatePurchase({ commit }, updPurchase) {  
+    const headers = { 
+      "Content-Type": "application/json"
+    };
+
+    axios.put(
+      "http://localhost:3000/purchases/"+updPurchase.id, updPurchase, {headers}
+    ).then((response) => {      
+      commit("updatePurchase", response.data);
+    });
   },
   
   }

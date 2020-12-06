@@ -1,122 +1,128 @@
 {
-    "products": [
+  "products": [
+    {
+      "id": 1,
+      "nome": "Refrigerante",
+      "preco": 5,
+      "descricao": "Garrafa de refrigerante de 2L",
+      "quantidade": 0
+    },
+    {
+      "id": 2,
+      "nome": "Pizza",
+      "preco": 30,
+      "descricao": "Pizza de calabresa",
+      "quantidade": 0
+    },
+    {
+      "id": 3,
+      "nome": "Panetone",
+      "preco": 10,
+      "descricao": "Panetone com gotas de chocolate",
+      "quantidade": 0
+    },
+    {
+      "id": 4,
+      "nome": "Pernil",
+      "preco": 45,
+      "descricao": "Panetone com gotas de chocolate",
+      "quantidade": 0
+    },
+    {
+      "id": 5,
+      "nome": "Barra de chocolate",
+      "preco": 3,
+      "descricao": "Barra de chocolate ao leite",
+      "quantidade": 0
+    },
+    {
+      "id": 6,
+      "nome": "Leite",
+      "preco": 2,
+      "descricao": "Caixa de leite de 1L",
+      "quantidade": 0
+    }
+  ],
+  "purchases": [
+    {
+      "id": "92951760-a9e2-43eb-9d58-deafc9aebd74",
+      "data": "06/05/2020 14:08:22",
+      "status": 3,
+      "entrega": true,
+      "endereco": "Rua São José, 90",
+      "itens": [
         {
-            "id": 1,
-            "nome": "Refrigerante",
-            "preco": 5,
-            "descricao": "Garrafa de refrigerante de 2L"
+          "id": 4,
+          "nome": "Pernil",
+          "quantidade": 1
         },
         {
-            "id": 2,
-            "nome": "Pizza",
-            "preco": 30,
-            "descricao": "Pizza de calabresa"
-        },
-        {
-            "id": 3,
-            "nome": "Panetone",
-            "preco": 10,
-            "descricao": "Panetone com gotas de chocolate"
-        },
-        {
-            "id": 4,
-            "nome": "Pernil",
-            "preco": 45,
-            "descricao": "Panetone com gotas de chocolate"
-        },
-        {
-            "id": 5,
-            "nome": "Barra de chocolate",
-            "preco": 3,
-            "descricao": "Barra de chocolate ao leite"
-        },
-        {
-            "id": 6,
-            "nome": "Leite",
-            "preco": 2,
-            "descricao": "Caixa de leite de 1L"
+          "id": 1,
+          "nome": "Refrigerante",
+          "quantidade": 3
         }
-    ],
-    "purchases": [
+      ],
+      "valor": 60
+    },
+    {
+      "id": "deb607eb-7209-48c0-b190-164ba7a09eb4",
+      "data": "17/08/2020 19:25:37",
+      "status": 3,
+      "entrega": false,
+      "endereco": "",
+      "itens": [
         {
-            "id": "92951760-a9e2-43eb-9d58-deafc9aebd74",
-            "data": "06/05/2020",
-            "status": 3,
-            "entrega": true,
-            "endereco": "Rua São José, 90",
-            "itens": [
-                {
-                    "id": 4,
-                    "nome": "Pernil",
-                    "quantidade": 1
-                },
-                {
-                    "id": 1,
-                    "nome": "Refrigerante",
-                    "quantidade": 3
-                }
-            ],
-            "valor": 60
+          "id": 2,
+          "nome": "Pizza",
+          "quantidade": 2
         },
         {
-            "id": "deb607eb-7209-48c0-b190-164ba7a09eb4",
-            "data": "17/08/2020",
-            "status": 3,
-            "entrega": false,
-            "endereco": "",
-            "itens": [
-                {
-                    "id": 2,
-                    "nome": "Pizza",
-                    "quantidade": 2
-                },
-                {
-                    "id": 5,
-                    "nome": "Barra de chocolate",
-                    "quantidade": 2
-                },
-                {
-                    "id": 3,
-                    "nome": "Panetone",
-                    "quantidade": 2
-                }
-            ],
-            "valor": 86
+          "id": 5,
+          "nome": "Barra de chocolate",
+          "quantidade": 2
         },
         {
-            "id": "68b73b01-0e82-4224-8747-31657603b2de",
-            "data": "25/11/2020",
-            "status": 3,
-            "entrega": true,
-            "endereco": "Rua São José, 90",
-            "itens": [
-                {
-                    "id": 3,
-                    "nome": "Panetone",
-                    "quantidade": 3
-                }
-            ],
-            "valor": 40
-        },
-        {
-            "id": "334a79e7-b2da-4152-a099-0388a839a293",
-            "data": "05/12/2020",
-            "status": 2,
-            "entrega": true,
-            "endereco": "Rua São José, 90",
-            "itens": [
-                {
-                    "id": 6,
-                    "nome": "Leite",
-                    "quantidade": 5
-                },                
-                {
-                    "id": 3,
-                    "nome": "Panetone",
-                    "quantidade": 2
-                }
-            ],
-            "valor": 40
+          "id": 3,
+          "nome": "Panetone",
+          "quantidade": 2
         }
-    ]
+      ],
+      "valor": 86
+    },
+    {
+      "id": "68b73b01-0e82-4224-8747-31657603b2de",
+      "data": "25/11/2020 13:18:28",
+      "status": 3,
+      "entrega": true,
+      "endereco": "Rua São José, 90",
+      "itens": [
+        {
+          "id": 3,
+          "nome": "Panetone",
+          "quantidade": 3
+        }
+      ],
+      "valor": 40
+    },
+    {
+      "id": "334a79e7-b2da-4152-a099-0388a839a293",
+      "data": "05/12/2020 16:05:12",
+      "status": 2,
+      "entrega": true,
+      "endereco": "Rua 5",
+      "itens": [
+        {
+          "id": 6,
+          "nome": "Leite",
+          "quantidade": 5
+        },
+        {
+          "id": 3,
+          "nome": "Panetone",
+          "quantidade": 2
+        }
+      ],
+      "valor": 40
+    }
+  ]
 }
