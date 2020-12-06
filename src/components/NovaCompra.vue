@@ -28,9 +28,9 @@
           </b-list-group-item>        
       </b-list-group>
 
-      <p>Valor total: R${{ valorTotal }},00</p>
+      <p id="valorNovo">Valor total: R${{ valorTotal }},00</p>
 
-      <b-button variant="primary" @click="registrarCompra()">Ok</b-button>
+      <b-button id="btnNovo" variant="primary" @click="registrarCompra()">Ok</b-button>
     </b-form>    
   </div>
 </template>
@@ -90,17 +90,25 @@ export default {
     registrarCompra(){
       let itens = this.allProducts.filter(this.verificarNaLista);
 
-      let purchase = {
-        "id": this.id,
-        "data": this.dia,
-        "status": this.status,
-        "entrega": this.entrega,
-        "endereco": this.endereco,
-        "itens": itens,
-        "valor": this.valorTotal
-      };
+      if(itens.length == 0)
+      {
+        alert("Selecione pelo menos 1 produto!");
+      }
+      else
+      {
+        let purchase = {
+          "id": this.id,
+          "data": this.dia,
+          "status": this.status,
+          "entrega": this.entrega,
+          "endereco": this.endereco,
+          "itens": itens,
+          "valor": this.valorTotal
+        };
 
-      this.$router.push({name: 'detalharCompra', params: { id: purchase.id, compra: purchase }})
+        this.$router.push({name: 'detalharCompra', params: { id: purchase.id, compra: purchase }})
+      }
+      
     }
   },
   created(){
@@ -112,5 +120,13 @@ export default {
 <style>
 #formNovaCompra{
   margin-top: 3rem;
+}
+#valorNovo{
+  margin-top: 1.5rem;
+  font-weight: bold;
+}
+#btnNovo{
+  margin-top: 1.5rem;
+  width: 5rem;
 }
 </style>

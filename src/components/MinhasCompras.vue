@@ -14,8 +14,8 @@
         header-text-variant="white"
         align="center"
       >
-        <router-link
-          tag="p"
+        <router-link          
+          tag="a"
           :to="{
             name: 'detalharCompra',
             params: { id: purchase.id, compra: purchase }

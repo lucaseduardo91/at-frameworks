@@ -3,7 +3,7 @@
     <h5>{{ purchase.data }}</h5>
     <p v-if="status == 3">Situação: Compra finalizada</p>
     <p v-else>Situação: Aguardando confirmação</p>
-    <p v-if="purchase.entrega">Endereço: {{ purchase.endereco }}</p>
+    <p v-if="purchase.entrega">Endereço para entrega: {{ purchase.endereco }}</p>
     <p>Produtos:</p>
 
     <b-list-group>
@@ -16,7 +16,7 @@
       </b-list-group-item>
     </b-list-group>
 
-    <p class="espacoDetalhe">Valor da compra: R${{ purchase.valor }},00</p>
+    <p class="espacoDetalhe negrito">Valor da compra: R${{ purchase.valor }},00</p>
 
     <div class="espacoDetalhe">
       <b-button class="tamanhoBotao" variant="primary" v-show="status == 2" @click="editarCompra()">Editar</b-button>
@@ -95,5 +95,8 @@ export default {
 }
 .tamanhoBotao{
   width: 6rem;
+}
+.negrito{
+  font-weight: bold;
 }
 </style>
