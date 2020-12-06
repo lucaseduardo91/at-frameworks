@@ -19,7 +19,6 @@ const state = {
   },
   
   addPurchase({ commit }, purchase){
-    purchase.id = 100;
     //axios.post...then()
     commit('addPurchase', purchase);
   },
@@ -28,7 +27,7 @@ const state = {
     commit('deletePurchase', id);
   },
   updatePurchase({ commit }, updPurchase) {
-    //axios.put...then()
+    //axios.put...then()    
     commit("updatePurchase", updPurchase);
   },
   
@@ -37,10 +36,10 @@ const state = {
   const mutations = {
     getPurchases: (state, data) => (state.purchases = data),
     addPurchase: (state, data) => state.purchases.push(data),
-    deletePurchase: (state, id) => (state.purchases = state.purchases.filter(u => u.id !== id)),
+    deletePurchase: (state, id) => (state.purchases = state.purchases.filter(p => p.id !== id)),
     updatePurchase: (state, data) => {
-      const index = state.purchases.findIndex(t => t.id === data.id)
-      if (index !== -1) {
+      const index = state.purchases.findIndex(p => p.id === data.id)
+      if (index !== -1) {        
         state.purchases.splice(index, 1, data);
         }
       }

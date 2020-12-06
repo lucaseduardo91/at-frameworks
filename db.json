@@ -46,10 +46,12 @@
             "endereco": "Rua São José, 90",
             "itens": [
                 {
+                    "id": 4,
                     "nome": "Pernil",
                     "quantidade": 1
                 },
                 {
+                    "id": 1,
                     "nome": "Refrigerante",
                     "quantidade": 3
                 }
@@ -64,14 +66,17 @@
             "endereco": "",
             "itens": [
                 {
+                    "id": 2,
                     "nome": "Pizza",
                     "quantidade": 2
                 },
                 {
+                    "id": 5,
                     "nome": "Barra de chocolate",
                     "quantidade": 2
                 },
                 {
+                    "id": 3,
                     "nome": "Panetone",
                     "quantidade": 2
                 }
@@ -86,6 +91,7 @@
             "endereco": "Rua São José, 90",
             "itens": [
                 {
+                    "id": 3,
                     "nome": "Panetone",
                     "quantidade": 3
                 }
@@ -100,10 +106,12 @@
             "endereco": "Rua São José, 90",
             "itens": [
                 {
+                    "id": 6,
                     "nome": "Leite",
                     "quantidade": 5
                 },                
                 {
+                    "id": 3,
                     "nome": "Panetone",
                     "quantidade": 2
                 }

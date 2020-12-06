@@ -1,11 +1,11 @@
 <template>
-  <b-container>
-    <label for="selectAtualizar">Escolha a forma de recebimento:</label>
+  <b-container id="containerAtualizacao">
+    <label class="espacoCampos" for="selectAtualizar">Escolha a forma de recebimento:</label>
     <b-form-select v-model="purchase.entrega" :options="options" id="selectAtualizar" @change="onChange"></b-form-select>
-    <label for="enderecoAtualizar" v-show="purchase.entrega == 1">Endereço da entrega:</label>
+    <label class="espacoCampos" for="enderecoAtualizar" v-show="purchase.entrega == 1">Endereço da entrega:</label>
     <b-form-input v-model="purchase.endereco" id="enderecoAtualizar" v-show="purchase.entrega == 1"></b-form-input>
-    <p>Valor da compra: {{ purchase.valor }}</p>
-    <b-button variant="primary" @click="atualizarCompra()">Atualizar</b-button>
+    <p class="espacoCampos">{{ valorAtualizado }}</p>
+    <b-button class="espacoCampos" variant="primary" @click="atualizarCompra()">Atualizar</b-button>
   </b-container>
 </template>
 
@@ -19,27 +19,35 @@ export default {
       id: this.$route.params.id,
       purchase: this.$route.params.purchase,
       options: [
-          { value: 1, text: 'Entrega em domicílio' },
-          { value: 2, text: 'Retirada na loja' }
+          { value: true, text: 'Entrega em domicílio' },
+          { value: false, text: 'Retirada na loja' }
       ]
     };
   },
   computed: {
-
+    valorAtualizado: function(){
+      return "Valor da compra: R$ "+ this.purchase.valor +",00"
+    }
   },
   methods: {
     ...mapActions(["updatePurchase"]),
     atualizarCompra() {
-      this.updatePurchase(this.purchase);
-    },
-    onChange(evt){
-      if(event.target.value == 1 && this.purchase.value < 50)
+      if(this.purchase.entrega == false)
       {
-        this.purchase.value += 10;
+        this.purchase.endereco = ''
       }
-      else if(event.target.value == 2 && this.purchase.value < 50)
+
+      this.updatePurchase(this.purchase);
+      this.$router.push({name: 'listaCompras'})
+    },
+    onChange(){      
+      if(this.purchase.entrega == true && this.purchase.valor < 50)
       {
-        this.purchase.value -= 10;
+        this.purchase.valor += 10;
+      }
+      else if(this.purchase.entrega == false && this.purchase.valor < 50)
+      {
+        this.purchase.valor -= 10;        
       }
     }
   }
@@ -47,5 +55,10 @@ export default {
 </script>
 
 <style>
-
+#containerAtualizacao{
+  margin-top: 4rem;
+}
+.espacoCampos{
+  margin-top: 1rem;
+}
 </style>
