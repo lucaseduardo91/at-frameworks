@@ -49,7 +49,7 @@ export default {
       {
         this.purchase.valor += 10;
       }
-      else if(this.purchase.entrega == false && this.purchase.valor < 50)
+      else if(this.purchase.entrega == false && this.purchase.valor <= 50)
       {
         this.purchase.valor -= 10;        
       }
